@@ -1,0 +1,12 @@
+﻿extends layout
+
+block content
+    section.container01
+        div.centerContent
+            h1= message
+            h2= error.status 
+        div.centerContent
+            img.image(src='/img/404.jpeg')   
+    div.btnsZone              
+        form(action='/', method='get')          
+            input.normalBtn(type='submit', value='Home')

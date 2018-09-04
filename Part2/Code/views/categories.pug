@@ -1,0 +1,3 @@
+.btnsZone
+  each category in categories                
+    input.normalBtn(type='submit', value=category.name, id=category._id, onClick='SearchByCatId(this)')

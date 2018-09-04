@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    section.container01
+        div.btnsZone            
+            each item in categories                
+                input.normalBtn(type='submit', value=item.name)   
+    
+        form(action='/categories', method="POST")          
+            section.inputs
+                label New Category
+                div
+                    label Name: 
+                    input.textInputs(type='text', name='name')                
+                    label Description: 
+                    input.textInputs(type='text', name='description')
+                div.btnsZone
+                    input.normalBtn(type='submit' value='Add')
+
+    div.btnsZone              
+        form(action='/', method='GET')          
+            input.normalBtn(type='submit', value='Home')

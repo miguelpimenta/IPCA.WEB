@@ -1,0 +1,61 @@
+﻿extends layout
+
+block content
+  .box    
+    section.search
+      .search1
+        h1 Gif&apos;s Everywhere
+      .search2
+        input#tbSearch.searchTerm(type='text')
+        button.searchButton(type='submit',id='btnSearch', onclick='Search(this.id)')
+          i.fa.fa-search  Search        
+      .btnsZone 
+        button.refreshBtn(type='submit' ,onclick='GetGifs(10)')
+          i.material-icons refresh
+        button.normalBtn(type='submit' ,id='btnTrending', onclick='Search(this.id)') Trending
+        button.normalBtn(type='submit' ,id='btnRandom', onclick='Search(this.id)') Random
+        form(action='/gyphys', method='GET')            
+          input.normalBtn(type='submit', value='New Gif')
+        input.normalBtn(type='submit', value='WIP New Gif', onclick='NewGif()')      
+        input.normalBtn(type='submit', value='Del Gif', onclick='DelGif()') 
+        input.normalBtn(type='submit', value='New Category', onClick='NewCategory()')
+        input.normalBtn(type='submit', value='Del Category', onClick='DelCategory()')
+
+    section.categories
+      .categories
+
+    section.content  
+      .gifs
+    
+    footer.foot
+      .foot1
+        h2 More info
+        nav.nav
+          a(href='http://www.ipca.pt')
+            i.fa.fa-home
+            | About Us
+          a(href='http://www.ipca.pt')
+            i.fa.fa-info
+            | Aditional Info
+          a(href='http://www.ipca.pt')
+            i.fa.fa-cog
+            | Privacy Policy
+          a(href='http://www.ipca.pt')
+            i.fa.fa-pencil
+            | Terms &amp; Conditions
+          a(href='http://www.ipca.pt')
+            i.fa.fa-square
+            | Faqs
+      .foot2
+        .footer_social
+          a(href='http://www.ipca.pt')
+            i.fa.fa-facebook  
+          a(href='http://www.ipca.pt')
+            i.fa.fa-twitter
+          a(href='http://www.ipca.pt')
+            i.fa.fa-linkedin
+          a(href='http://www.ipca.pt')
+            i.fa.fa-github
+        .footer_text
+          p &copy; Angelo Ferreira (a11201) &amp; Miguel Pimenta (a12555)
+          p All rights reserved

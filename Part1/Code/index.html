@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Gif's Everywhere</title>
+	<meta charset="ut8">
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body onload="Loaded()">
+	<div class="box">
+		<header class="multimedia">
+			<div class="multimedia1">
+				<img class="image1" alt="Logotipo IPCA" src="img/novo_ipca_branco.svg">
+				<a href="http://www.ipca.pt"><h1>Multimédia IPCA</h1></a>
+			</div>			
+			<div class="multimedia3">
+				<img class="image2" alt="Imagem Canto Superior Direito" src="https://i.imgur.com/Q3cUg29.gif">
+				<h1>AF & MP</h1>
+			</div>
+		</header>
+
+		<section class="search">
+			<div class="search1">
+				<h1>Gif's Everywhere</h1>
+			</div>
+			<div class="search2">
+				<input type="text" class="searchTerm" id="tbSearch">
+				<button type="submit" class="searchButton" onclick="Search()">
+					<i class="fa fa-search"> Search</i>
+				</button>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="btnsZone">
+				<button type="submit" class="refreshBtn" onclick="Search()">
+					<i class="material-icons">refresh</i>
+				</button>
+				<button type="submit" class="normalBtn" onclick="Trending()">Trending</button>
+				<button type="submit" class="normalBtn" onclick="SearchFun()">Funny</button>
+				<button type="submit" class="normalBtn" onclick="SearchSports()">Sports</button>
+				<button type="submit" class="normalBtn" onclick="Random()">Random</button>
+			</div>
+			<div class="gifs">
+			</div>
+		</section>
+
+		<footer class="foot">
+			<div class="foot1">
+				<h2>More info</h2>
+				<nav class="nav">
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-home"></i>About Us</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-info"></i>Aditional Info</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-cog"></i>Privacy Policy</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-pencil"></i>Terms & Conditions</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-square"></i>Faqs</a>
+				</nav>
+			</div>
+			<div class="foot2">
+				<div class="footer_social">
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-facebook"> </i>
+					</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a href="http://www.ipca.pt">
+						<i class="fa fa-github"></i>
+					</a>
+				</div>
+				<div class="footer_text">
+					<p>© Angelo Ferreira (a11201) & Miguel Pimenta (a12555)</p>
+					<p>All rights reserved</p>
+				</div>
+			</div>
+		</footer>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/script.js"></script>
+	</div>
+</body>
+
+</html>

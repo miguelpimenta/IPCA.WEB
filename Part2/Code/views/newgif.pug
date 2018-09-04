@@ -1,0 +1,28 @@
+section.container03
+    form(action='/gyphys', method="POST", enctype="multipart/form-data", id='frmUploader')          
+        section.inputs
+            label New Gif
+            div
+                //label Name: 
+                input.textInputs(type='text', name='name', id='name', placeholder='Name')                
+                //label Description: 
+                input.textInputs(type='text', name='description', id='description', placeholder='Description')
+                //label Tags: 
+                input.textInputs(type='text', name='tags', id='tags', placeholder='Tags (Separated by ; )')
+                label Rating: 
+                select.textInputs(type='select', name='rating', id='rating')
+                    each item in ['Y', 'G', 'PG', 'PG-13', 'R']
+                        option(value=item) #{item}
+                label Category: 
+                select.textInputs(type='select', name='category', id='category', placeholder='Category')
+                    each category in categories
+                        option(value=category._id) #{category.name}            
+                //label File:
+                //input.textInputs(type='text', name='url', id='url', placeholder='Url')
+                input.textInputs(type='file', name='image', id='image', accept='image/gif', onchange='ReadFile(this)')
+                img(id="loadedGif" src="#")
+                div.btnsZone
+                    input.normalBtn(type='submit' value='Add')
+//div.btnsZone              
+    form(action='/', method='GET')          
+        input.normalBtn(type='submit', value='Home')
